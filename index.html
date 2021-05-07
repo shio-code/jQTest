@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>jQTest</title>
     <style>
+      h1{
+        margin: 50px;
+      }
+
       p{
         display:none;
       }
@@ -23,11 +27,16 @@
       #gb{
         display:none;
       }
+
+      #roop{
+        margin-top: 50px;
+      }
     </style>
   </head>
   <body>
+    <h1>jQueryTest</h1>
+
     <div class="all">
-      <h1>jQueryTest</h1>
       <button id="gr">あいさつする</button>
       <div class="open">
         <p class="hl">こんにちは</p>
@@ -36,8 +45,10 @@
 
         <button id="gb">さようなら</button>
       </div>
-
     </div>
+
+    <button id="roop">繰り返し可能</button>
+    <p class="txt">Push!</p>
 
 
 
@@ -54,9 +65,13 @@
 
           $('#gb').click(function(){
             $('.all').fadeOut(2000,function(){
-              alert('Clear!')
+              alert('Thank you!')
             });
           })
+        });
+
+        $('#roop').click(function(){
+          $('.txt').toggle(500);
         });
       });
     </script>
