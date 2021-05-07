@@ -7,19 +7,19 @@
       p{
         display:none;
       }
-      
+
       a{
         display:none;
       }
-      
+
       body{
         text-align:center;
       }
-      
+
       .gn{
         display:none;
       }
-      
+
       #gb{
         display:none;
       }
@@ -33,15 +33,15 @@
         <p class="hl">こんにちは</p>
         <a>こんばんは！</a>
         <p class="gn">おやすみなさい</p>
-        
-        <button id="gb">さようなら</button>    
+
+        <button id="gb">さようなら</button>
       </div>
-      
+
     </div>
-    
-  
-    
-    
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
       $(function(){
@@ -51,9 +51,11 @@
           $('a').css('color','purple').fadeIn(1500);
           $('#gb').fadeIn(1000);
           $('#gr').fadeOut(2000);
-          
+
           $('#gb').click(function(){
-            $('.all').fadeOut(2000);
+            $('.all').fadeOut(2000,function(){
+              alert('Clear!')
+            });
           })
         });
       });
