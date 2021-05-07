@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQTest</title>
+    <style>
+      p{
+        display:none;
+      }
+      
+      a{
+        display:none;
+      }
+      
+      body{
+        text-align:center;
+      }
+      
+      .gn{
+        display:none;
+      }
+      
+      #gb{
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <h1>jQueryTest</h1>
+      <button id="gr">あいさつする</button>
+      <div class="open">
+        <p class="hl">こんにちは</p>
+        <a>こんばんは！</a>
+        <p class="gn">おやすみなさい</p>
+        
+        <button id="gb">さようなら</button>    
+      </div>
+      
+    </div>
+    
+  
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('#gr').click(function(){
+          $(".gn").css('color','black').fadeIn(4000);
+          $('.hl').css('color','orange').show();
+          $('a').css('color','purple').fadeIn(1500);
+          $('#gb').fadeIn(1000);
+          $('#gr').fadeOut(2000);
+          
+          $('#gb').click(function(){
+            $('.all').fadeOut(2000);
+          })
+        });
+      });
+    </script>
+  </body>
+</html>
